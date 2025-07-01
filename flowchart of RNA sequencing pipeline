@@ -1,0 +1,23 @@
+Raw RNA-Seq Reads (FASTQ)
+  |
+  v
+FastQC --> Quality reports
+  |
+  v
+
+ [STAR] --> Aligned reads (BAM)
+      |
+      v
+ [Picard] --> Sort, Add Read Groups, Mark Duplicates
+      |
+      v
+ [StringTie] --> Transcript Assembly & Quantification
+      |
+      v
+  Gene Expression Matrix
+      |
+      v
+    Kallisto --> Quantification from pseudoalignment
+      |
+      v
+   Transcript Abundance Estimates
